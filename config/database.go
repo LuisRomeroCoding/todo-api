@@ -8,7 +8,7 @@ import (
 var DB *gorm.DB
 
 func ConnectDatabase() {
-	dsn := "sqlserver://username:password@localhost:1433?database=yourdb"
+	dsn := `Server=(localdb)\MSSQLLocalDB;Database=TodoList;Trusted_Connection=True;`
 
 	database, err := gorm.Open(sqlserver.Open(dsn), &gorm.Config{})
 
